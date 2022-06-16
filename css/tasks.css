@@ -1,0 +1,18 @@
+/**/
+
+#sample-task{
+    display: flex;
+    justify-content: center;
+    border: 2px solid aqua;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sample-task input{
+    width: 2rem;
+}
+
+#sample-task input::marker{
+    color: black;
+    background-color: black;
+}
