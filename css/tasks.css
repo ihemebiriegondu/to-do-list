@@ -1,18 +1,196 @@
-/**/
+section{
+    padding: 3rem 1rem;
+}
 
-#sample-task{
+section h1{
+    margin-bottom: 2rem;
+}
+
+.lists{
     display: flex;
-    justify-content: center;
+    padding: 0 1.1rem;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
     border: 2px solid aqua;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 15px;
 }
 
-#sample-task input{
-    width: 2rem;
+.lists button{
+    background-color: white;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    margin-top: 0.2rem;
 }
 
-#sample-task input::marker{
-    color: black;
+.lists button img{
+    width: 1rem;
+}
+
+.lists p{
+   font-size: 1.3rem;
+   margin-top: 0.5rem;
+   font-weight: 500;
+}
+
+.lists input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 3px;
+    background-clip: content-box;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.lists input:checked {
     background-color: black;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: aqua;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+button a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+
+button a:active{
+    color: black;
+}
+
+.modal-header button{
+    border: none;
+    outline: none;
+}
+
+.modal-dialog{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.modal-content{
+    height: 90%;
+    width: 100%;
+    background-color: aqua;
+    border-radius: 20px 20px 0 0;
+}
+
+#title{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0.8rem 0.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+#title input{
+    width: 100%;
+    border: none;
+    box-sizing: content-box;
+    outline: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.3rem;
+}
+
+#title textarea{
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+
+#info {
+    width: 100%;
+}
+
+#info div{
+    width: 100%;
+}
+
+.form-control{
+    border: none;
+    outline: none;
+}
+
+#date{
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+#date:invalid::before{
+    content: attr(placeholder);
+    color: rgb(119, 116, 116);
+    position: absolute;
+    width: 80%;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+#date:valid:focus:active{
+    color: black;
+}
+
+#date:valid:focus:active::before{
+    display: none;
+}
+
+#date:active::before{
+    display: none;
+}
+
+#location{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#location input{
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.dropdown-menu div{
+    display: inline;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
 }
