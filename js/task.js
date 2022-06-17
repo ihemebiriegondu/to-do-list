@@ -1,14 +1,16 @@
 
 const addTaskButton = document.querySelector('#add-task');
-const created = document.querySelector("#add-task a");
 
 
 let addTaskButtonFunction = () => {
     const input = document.querySelector('#title input');
     const inputValue = input.value;
+    const dateTime = document.querySelector("#date").value;
     const taskList = document.getElementById('task-list');
+    const modalDialog = document.querySelector("#exampleModal");
+    const created = document.getElementById("created");
 
-    if (document.querySelector('#title input').value === "") {
+    if (inputValue === "" || dateTime === "") {
         alert("Please Enter a Task")
     }
     else {
@@ -24,7 +26,13 @@ let addTaskButtonFunction = () => {
             </div>
         `;
         inputValue === '';
-        //created.setAttribute("href", "./task-added.html")
+        dateTime === "";
+
+        created.style.display = "flex";
+        setTimeout(hideCreated, 2000)
+        function hideCreated () {
+            created.style.display = "none";
+        }
 
         var current_tasks = document.querySelectorAll(".delete");
         for (var i = 0; i < current_tasks.length; i++) {
