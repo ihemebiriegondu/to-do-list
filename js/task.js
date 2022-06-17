@@ -5,7 +5,8 @@ const addTaskButton = document.querySelector('#add-task');
 let addTaskButtonFunction = () => {
     const input = document.querySelector('#title input');
     const inputValue = input.value;
-    const dateTime = document.querySelector("#date").value;
+    const dateTime = document.querySelector("#date");
+    const textArea = document.querySelector("#text-area");
     const taskList = document.getElementById('task-list');
     const modalDialog = document.querySelector("#exampleModal");
     const created = document.getElementById("created");
@@ -14,19 +15,21 @@ let addTaskButtonFunction = () => {
         alert("Please Enter a Task")
     }
     else {
+        let inputNewValue = inputValue;
         taskList.innerHTML += `
             <div class="lists">
                 <input id="radio" type="radio">
                 <p>
-                    ${inputValue}
+                    ${inputNewValue}
                 </p>
                 <button class="delete">
                     <img src="./images/trash-solid.svg" alt="">
                 </button>
             </div>
         `;
-        inputValue === '';
-        dateTime === "";
+        input.value = "";
+        dateTime.value = "";
+        textArea.value = "";
 
         created.style.display = "flex";
         setTimeout(hideCreated, 2000)
@@ -42,37 +45,12 @@ let addTaskButtonFunction = () => {
         }
     }
 
-
 };
 addTaskButton.addEventListener('click', addTaskButtonFunction);
 
 
-/*document.querySelector('.modal-header #add-task').onclick = function () {
-    if (document.querySelector('#title input').value.length == 0) {
-        alert("Please Enter a Task")
-    }
 
-    else {
-        alert(document.getElementById('add-task').value)
-        taskList.innerHTML += `
-            <div class="lists">
-                <input id="radio" type="radio">
-                <p>
-                    ${sample}
-                </p>
-            </div>
-        `;
-
-        var current_tasks = document.querySelectorAll(".delete");
-        for (var i = 0; i < current_tasks.length; i++) {
-            current_tasks[i].onclick = function () {
-                this.parentNode.remove();
-            }
-        }
-    }
-}*/
-
-
+//bootstrap modal
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
 
